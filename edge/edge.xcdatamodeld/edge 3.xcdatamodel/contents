@@ -1,0 +1,431 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="3401" systemVersion="13B42" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Applications" representedClassName="Applications" syncable="YES">
+        <attribute name="appId" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="crtBy" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="crtDt" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="desc" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="status" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="uptBy" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="uptDt" optional="YES" attributeType="Date" syncable="YES"/>
+    </entity>
+    <entity name="ArcCategory" representedClassName="ArcCategory" syncable="YES">
+        <attribute name="arcCatId" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="status" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+    </entity>
+    <entity name="CompProduct" representedClassName="CompProduct" syncable="YES">
+        <attribute name="addlNotes" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="company" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="compProdId" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="crtBy" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="crtDt" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="desc" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="prodId" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="status" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="uptBy" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="uptDt" optional="YES" attributeType="Date" syncable="YES"/>
+        <relationship name="compProductToProduct" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Product" inverseName="productToCompProduct" inverseEntity="Product" syncable="YES"/>
+    </entity>
+    <entity name="Concern" representedClassName="Concern" syncable="YES">
+        <attribute name="arcCatId" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="concernId" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="crtBy" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="crtDt" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="desc" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sortOrder" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="status" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="uptBy" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="uptDt" optional="YES" attributeType="Date" syncable="YES"/>
+        <relationship name="concernToProcedureStep" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ProcedureStep" inverseName="procedureStepToConcern" inverseEntity="ProcedureStep" syncable="YES"/>
+        <relationship name="concernToProduct" optional="YES" toMany="YES" minCount="1" deletionRule="Nullify" destinationEntity="Product" inverseName="productToConcern" inverseEntity="Product" syncable="YES"/>
+    </entity>
+    <entity name="Content" representedClassName="Content" syncable="YES">
+        <attribute name="author" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="bitrate" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="cntId" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="contentCatId" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="copyApprovalStatus" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="crtBy" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="crtDt" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="desc" optional="YES" attributeType="String" indexed="YES" syncable="YES"/>
+        <attribute name="expDt" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="externalLink" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="height" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="isSharable" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="keywords" optional="YES" attributeType="String" indexed="YES" syncable="YES"/>
+        <attribute name="md5hash" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="mime" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="owner" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="path" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="priority" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="quality" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="size" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="sortOrder" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="status" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="thumbnailImgPath" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" indexed="YES" syncable="YES"/>
+        <attribute name="uptBy" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="uptDt" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="width" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <relationship name="contentToMyFavorite" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="MyFavorite" inverseName="favoriteToContent" inverseEntity="MyFavorite" syncable="YES"/>
+        <relationship name="contentToMyRecentlyViewed" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="MyRecentlyViewed" inverseName="myRecentlyViewedToContent" inverseEntity="MyRecentlyViewed" syncable="YES"/>
+        <relationship name="contentToSharedLink" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="SharedLink" inverseName="sharedLinkToContent" inverseEntity="SharedLink" syncable="YES"/>
+    </entity>
+    <entity name="ContentCategory" representedClassName="ContentCategory" syncable="YES">
+        <attribute name="contentCatId" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="crtBy" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="crtDt" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="desc" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="status" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="uptBy" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="uptDt" optional="YES" attributeType="Date" syncable="YES"/>
+    </entity>
+    <entity name="ContentMapping" representedClassName="ContentMapping" syncable="YES">
+        <attribute name="cntId" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="cntMapId" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="crtBy" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="crtDt" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="medCatId" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="medId" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="status" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="uptBy" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="uptDt" optional="YES" attributeType="Date" syncable="YES"/>
+    </entity>
+    <entity name="ContentSearch" representedClassName="ContentSearch" syncable="YES">
+        <attribute name="catId" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="catName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="cntId" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="keywords" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="medCatId" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="medCatName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="medId" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="medName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="mime" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="path" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="prodCatName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="thumbnailImgPath" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="uptDt" optional="YES" attributeType="Date" syncable="YES"/>
+    </entity>
+    <entity name="ExtendedMetadata" representedClassName="ExtendedMetadata" syncable="YES">
+        <attribute name="cntExtFieldId" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="cntId" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="fieldName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="fieldValue" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="status" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+    </entity>
+    <entity name="FileContent" representedClassName="FileContent" syncable="YES">
+        <attribute name="cntId" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="downloadStatus" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="initialSync" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="path" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="size" optional="YES" attributeType="Float" defaultValueString="0" syncable="YES"/>
+        <attribute name="splId" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="status" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Market" representedClassName="Market" syncable="YES">
+        <attribute name="desc" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="mktId" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="status" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <relationship name="marketToProduct" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Product" inverseName="productToMarket" inverseEntity="Product" syncable="YES"/>
+    </entity>
+    <entity name="MedicalCategory" representedClassName="MedicalCategory" syncable="YES">
+        <attribute name="crtBy" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="crtDt" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="desc" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="medCatId" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="status" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="uptBy" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="uptDt" optional="YES" attributeType="Date" syncable="YES"/>
+    </entity>
+    <entity name="MyEntitlement" representedClassName="MyEntitlement" syncable="YES">
+        <attribute name="contentUpdDt" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="isDefault" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="splId" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="status" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="totalFiles" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="totalSize" optional="YES" attributeType="Decimal" defaultValueString="0.0" syncable="YES"/>
+        <relationship name="myEntitlementToMyProfile" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="MyProfile" inverseName="myProfileToMyEntitlement" inverseEntity="MyProfile" syncable="YES"/>
+        <relationship name="myEntitlementToSpeciality" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Speciality" inverseName="specialityToMyEntitlement" inverseEntity="Speciality" syncable="YES"/>
+    </entity>
+    <entity name="MyFavorite" representedClassName="MyFavorite" syncable="YES">
+        <attribute name="cntId" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="contentCatId" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="crtDt" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="favId" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="isOnDashboard" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="isProduct" optional="YES" attributeType="Boolean" defaultValueString="NO" syncable="YES"/>
+        <attribute name="sortOrder" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="status" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="uptDt" optional="YES" attributeType="Date" syncable="YES"/>
+        <relationship name="favoriteToContent" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Content" inverseName="contentToMyFavorite" inverseEntity="Content" syncable="YES"/>
+    </entity>
+    <entity name="MyForm" representedClassName="MyForm" syncable="YES">
+        <attribute name="address" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="address2" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="choiceOne" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="city" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="crtDt" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="email" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="fax" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="formId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="formTitle" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="information" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="institution" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="others" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="phone" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="rep" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="respMode" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sales" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sbtDt" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="signature" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="state" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="status" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="territory" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="topics" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="uptDt" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="zipCode" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="MyPreference" representedClassName="MyPreference" syncable="YES">
+        <attribute name="crtDt" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="prefId" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="prefKey" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="prefValue" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="status" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="uptDt" optional="YES" attributeType="Date" syncable="YES"/>
+    </entity>
+    <entity name="MyProfile" representedClassName="MyProfile" syncable="YES">
+        <attribute name="addrLine1" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="addrLine2" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="contentUpdDt" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="country" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="crtDt" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="department" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="division" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="email" attributeType="String" syncable="YES"/>
+        <attribute name="firstName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lastName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="market" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="primaryPhone" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="profId" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="profilePhoto" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="repType" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="role" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="state" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="status" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="street" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="uptDt" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="zipcode" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="myProfileToMyEntitlement" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="MyEntitlement" inverseName="myEntitlementToMyProfile" inverseEntity="MyEntitlement" syncable="YES"/>
+    </entity>
+    <entity name="MyRecentlyViewed" representedClassName="MyRecentlyViewed" syncable="YES">
+        <attribute name="crtDt" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="isProduct" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <relationship name="myRecentlyViewedToContent" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Content" inverseName="contentToMyRecentlyViewed" inverseEntity="Content" syncable="YES"/>
+        <relationship name="myRecentlyViewedToProduct" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Product" syncable="YES"/>
+    </entity>
+    <entity name="PresentationDetail" representedClassName="PresentationDetail" syncable="YES">
+        <attribute name="crtDt" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="presDetId" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="presMasId" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="slideOrder" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="slideTitle" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="status" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="uptDt" optional="YES" attributeType="Date" syncable="YES"/>
+        <relationship name="PresentationDetailToPresentationMaster" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="PresentationMaster" inverseName="PresentationMasterToPresentationDetail" inverseEntity="PresentationMaster" syncable="YES"/>
+    </entity>
+    <entity name="PresentationMaster" representedClassName="PresentationMaster" syncable="YES">
+        <attribute name="crtDt" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="footer" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="header" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="presMasId" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="status" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="subTitle1" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="subTitle2" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="subTitle3" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="uptDt" optional="YES" attributeType="Date" syncable="YES"/>
+        <relationship name="PresentationMasterToPresentationDetail" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="PresentationDetail" inverseName="PresentationDetailToPresentationMaster" inverseEntity="PresentationDetail" syncable="YES"/>
+    </entity>
+    <entity name="Procedure" representedClassName="Procedure" syncable="YES">
+        <attribute name="crtBy" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="crtDt" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="desc" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="procId" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="splId" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="status" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="uptBy" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="uptDt" optional="YES" attributeType="Date" syncable="YES"/>
+        <relationship name="procedureToProcedureStep" optional="YES" toMany="YES" minCount="1" deletionRule="Nullify" destinationEntity="ProcedureStep" inverseName="procedureStepToProcedure" inverseEntity="ProcedureStep" syncable="YES"/>
+        <relationship name="procedureToProduct" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Product" inverseName="productToProcedure" inverseEntity="Product" syncable="YES"/>
+        <relationship name="procedureToSpeciality" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Speciality" inverseName="specialityToProcedure" inverseEntity="Speciality" syncable="YES"/>
+    </entity>
+    <entity name="ProcedureStep" representedClassName="ProcedureStep" syncable="YES">
+        <attribute name="arcCatId" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="crtBy" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="crtDt" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="desc" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="procStepId" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="status" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="uptBy" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="uptDt" optional="YES" attributeType="Date" syncable="YES"/>
+        <relationship name="procedureStepToConcern" optional="YES" toMany="YES" minCount="1" deletionRule="Nullify" destinationEntity="Concern" inverseName="concernToProcedureStep" inverseEntity="Concern" syncable="YES"/>
+        <relationship name="procedureStepToProcedure" optional="YES" toMany="YES" minCount="1" deletionRule="Nullify" destinationEntity="Procedure" inverseName="procedureToProcedureStep" inverseEntity="Procedure" syncable="YES"/>
+        <relationship name="procedureStepToProduct" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Product" inverseName="productToProcedureStep" inverseEntity="Product" syncable="YES"/>
+    </entity>
+    <entity name="ProcedureStepToProductNew" representedClassName="ProcedureStepToProductNew" syncable="YES">
+        <attribute name="arcCatId" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="crtBy" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="crtDt" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="procStepId" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="prodId" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="prodProcStepId" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="sortOrder" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="status" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="uptBy" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="uptDt" optional="YES" attributeType="Date" syncable="YES"/>
+    </entity>
+    <entity name="Product" representedClassName="Product" syncable="YES">
+        <attribute name="arcId" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="code" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="crtBy" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="crtDt" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="desc" optional="YES" attributeType="String" indexed="YES" syncable="YES"/>
+        <attribute name="mktId" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" indexed="YES" syncable="YES"/>
+        <attribute name="prodCatId" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="prodId" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="sku" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="status" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="uptBy" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="uptDt" optional="YES" attributeType="Date" syncable="YES"/>
+        <relationship name="productToCompProduct" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CompProduct" inverseName="compProductToProduct" inverseEntity="CompProduct" syncable="YES"/>
+        <relationship name="productToConcern" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Concern" inverseName="concernToProduct" inverseEntity="Concern" syncable="YES"/>
+        <relationship name="productToMarket" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Market" inverseName="marketToProduct" inverseEntity="Market" syncable="YES"/>
+        <relationship name="productToProcedure" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Procedure" inverseName="procedureToProduct" inverseEntity="Procedure" syncable="YES"/>
+        <relationship name="productToProcedureStep" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ProcedureStep" inverseName="procedureStepToProduct" inverseEntity="ProcedureStep" syncable="YES"/>
+        <relationship name="productToProdCat" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ProductCategory" inverseName="prodCatToProduct" inverseEntity="ProductCategory" syncable="YES"/>
+        <compoundIndexes>
+            <compoundIndex>
+                <index value="name"/>
+                <index value="desc"/>
+                <index value="code"/>
+                <index value="sku"/>
+            </compoundIndex>
+        </compoundIndexes>
+    </entity>
+    <entity name="ProductCategory" representedClassName="ProductCategory" syncable="YES">
+        <attribute name="crtBy" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="crtDt" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="desc" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="prodCatId" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="status" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="uptBy" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="uptDt" optional="YES" attributeType="Date" syncable="YES"/>
+        <relationship name="prodCatToProduct" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Product" inverseName="productToProdCat" inverseEntity="Product" syncable="YES"/>
+    </entity>
+    <entity name="SharedLink" representedClassName="SharedLink" syncable="YES">
+        <attribute name="cntId" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="contentCatId" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="crtDt" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="externalLink" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="path" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="thumbnailImgPath" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="sharedLinkToContent" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Content" inverseName="contentToSharedLink" inverseEntity="Content" syncable="YES"/>
+        <relationship name="sharedLinkToSurgeon" optional="YES" minCount="1" maxCount="1" deletionRule="Cascade" destinationEntity="Surgeon" inverseName="surgeonToSharedLink" inverseEntity="Surgeon" syncable="YES"/>
+    </entity>
+    <entity name="Speciality" representedClassName="Speciality" syncable="YES">
+        <attribute name="crtBy" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="crtDt" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="lastSyncDt" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="splCatId" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="splId" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="status" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="uptBy" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="uptDt" optional="YES" attributeType="Date" syncable="YES"/>
+        <relationship name="specialityToMyEntitlement" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="MyEntitlement" inverseName="myEntitlementToSpeciality" inverseEntity="MyEntitlement" syncable="YES"/>
+        <relationship name="specialityToProcedure" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Procedure" inverseName="procedureToSpeciality" inverseEntity="Procedure" syncable="YES"/>
+    </entity>
+    <entity name="SpecialityCategory" representedClassName="SpecialityCategory" syncable="YES">
+        <attribute name="crtBy" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="crtDt" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="desc" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="splCatId" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="status" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="uptBy" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="uptDt" optional="YES" attributeType="Date" syncable="YES"/>
+    </entity>
+    <entity name="SpecialtyHotSpot" representedClassName="SpecialtyHotSpot" syncable="YES">
+        <attribute name="cntId" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="height" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="procId" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="splId" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="width" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="x" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="y" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+    </entity>
+    <entity name="Surgeon" representedClassName="Surgeon" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="surgeonToSharedLink" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="SharedLink" inverseName="sharedLinkToSurgeon" inverseEntity="SharedLink" syncable="YES"/>
+    </entity>
+    <entity name="Tracking" representedClassName="Tracking" syncable="YES">
+        <attribute name="activityCode" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="resources" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="timestamp" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userName" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Applications" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="ArcCategory" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="CompProduct" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="Concern" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="Content" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="ContentCategory" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="ContentMapping" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="ContentSearch" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="ExtendedMetadata" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="FileContent" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="Market" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="MedicalCategory" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="MyEntitlement" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="MyFavorite" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="MyForm" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="MyPreference" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="MyProfile" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="MyRecentlyViewed" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="PresentationDetail" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="PresentationMaster" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="Procedure" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="ProcedureStep" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="ProcedureStepToProductNew" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="Product" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="ProductCategory" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="SharedLink" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="Speciality" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="SpecialityCategory" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="SpecialtyHotSpot" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="Surgeon" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="Tracking" positionX="0" positionY="0" width="0" height="0"/>
+    </elements>
+</model>

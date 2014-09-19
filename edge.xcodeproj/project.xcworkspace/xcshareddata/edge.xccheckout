@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>4A9D9FF3-B13E-4A2C-A964-D8D09366C145</string>
+	<key>IDESourceControlProjectName</key>
+	<string>edge</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>3F59938B79343367331F89BFAB11CA4EC525D01C</key>
+		<string>https://github.com/rwalton-eprosoft/lab8.git</string>
+		<key>B4D1497A2BBC4C18ADC7A602491FEE8426AE28F7</key>
+		<string>http://github.com/eprosoft/lab7.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>edge.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>3F59938B79343367331F89BFAB11CA4EC525D01C</key>
+		<string>../..</string>
+		<key>B4D1497A2BBC4C18ADC7A602491FEE8426AE28F7</key>
+		<string>../../../lab7</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/rwalton-eprosoft/lab8.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>3F59938B79343367331F89BFAB11CA4EC525D01C</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>B4D1497A2BBC4C18ADC7A602491FEE8426AE28F7</string>
+			<key>IDESourceControlWCCName</key>
+			<string>lab7</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>3F59938B79343367331F89BFAB11CA4EC525D01C</string>
+			<key>IDESourceControlWCCName</key>
+			<string>lab8</string>
+		</dict>
+	</array>
+</dict>
+</plist>

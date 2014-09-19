@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>Total Access Labs.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>4</integer>
+		</dict>
+		<key>Total Access QA.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
+		<key>Total Access.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>5</integer>
+		</dict>
+		<key>edge-dev.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+		<key>edge-live.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
+		<key>edge.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>0</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>56E90339173E855900BDF4E7</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E21DA344188DB00B001A083D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E2DB0FEF1885CFF500B07AD1</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E2E1BFB21885D1890014A865</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E2E1C2A41885D2550014A865</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E2E1C89118870E710014A865</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>

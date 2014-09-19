@@ -1,0 +1,433 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="3.0" toolsVersion="6245" systemVersion="13E28" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MIRFormVC">
+            <connections>
+                <outlet property="Address1Txtfiled" destination="Q7P-2x-iib" id="ovy-IX-0qy"/>
+                <outlet property="Address2Txtfiled" destination="XDZ-bd-PM4" id="Zfa-4i-6by"/>
+                <outlet property="BackGroundScrView" destination="wFe-XP-jeM" id="fq0-TJ-zlf"/>
+                <outlet property="EmailTxtfiled" destination="X0N-U8-lY5" id="RCG-zf-VeF"/>
+                <outlet property="FaxTxtfiled" destination="jrF-kz-HRN" id="bOB-z7-ORt"/>
+                <outlet property="InformationTxtView" destination="fS1-h3-tVL" id="xeD-O2-U6C"/>
+                <outlet property="InstitutionTxtfiled" destination="3aG-Mb-EXG" id="nZW-0N-fP3"/>
+                <outlet property="NameTxtfiled" destination="IKH-wx-xtM" id="AJS-IN-npU"/>
+                <outlet property="OthersTxtfiled" destination="eMm-eF-r2q" id="8Ap-bi-lJn"/>
+                <outlet property="PostalcodeTxtfiled" destination="xc2-xH-xZp" id="rBh-UR-P5H"/>
+                <outlet property="SAlesTxtfiled" destination="5gn-ob-jPN" id="BHl-Yk-50A"/>
+                <outlet property="SignatureBtn" destination="bHm-RL-LfL" id="lry-Lh-oFX"/>
+                <outlet property="SignatureImage" destination="BXG-Fr-VYh" id="dc6-ZJ-Dhq"/>
+                <outlet property="StateTxtfiled" destination="HkF-RO-gKg" id="qmK-3j-ggX"/>
+                <outlet property="TelePhoneTxtfiled" destination="NK4-Kx-ssf" id="OaG-fc-g2o"/>
+                <outlet property="TerritoryTxtfiled" destination="7ZQ-nR-Qhp" id="csa-OS-6ho"/>
+                <outlet property="TitleTxtfiled" destination="4qP-v4-xQI" id="TJu-CZ-69K"/>
+                <outlet property="categorybuton1" destination="JMT-3I-4WF" id="BBa-Xl-KwZ"/>
+                <outlet property="categorybuton2" destination="MBx-6V-1S8" id="1M3-sA-ecU"/>
+                <outlet property="categorybuton3" destination="8EI-Gw-GWS" id="4P6-Ft-HFJ"/>
+                <outlet property="categorybuton4" destination="MDt-Um-Qsx" id="lE4-mg-apX"/>
+                <outlet property="categorybuton5" destination="YvG-aj-mfJ" id="iBg-9Q-SWt"/>
+                <outlet property="categorybuton6" destination="rJS-8Z-8xi" id="8Oz-Le-mm0"/>
+                <outlet property="deleteBtn" destination="fHW-ss-pab" id="2M8-ge-UNV"/>
+                <outlet property="responsemethod1" destination="hyT-0L-XQ4" id="fao-2e-ojp"/>
+                <outlet property="responsemethod2" destination="0yg-jf-5ks" id="WIi-vR-Bqg"/>
+                <outlet property="responsemethod3" destination="HcA-Ag-8yh" id="mwG-jN-nz6"/>
+                <outlet property="responsemethod4" destination="7YI-mq-mZz" id="M5O-oS-Fbk"/>
+                <outlet property="responsemethod5" destination="y6h-WS-u4a" id="UXs-BD-oae"/>
+                <outlet property="view" destination="hCY-Zl-9j9" id="yWj-5J-wo2"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="hCY-Zl-9j9">
+            <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view alpha="0.80000001192092896" contentMode="scaleToFill" id="ywI-Lg-fkg">
+                    <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="wFe-XP-jeM">
+                    <rect key="frame" x="63" y="123" width="900" height="518"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <subviews>
+                        <button opaque="NO" tag="202" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="HcA-Ag-8yh">
+                            <rect key="frame" x="410" y="391" width="69" height="26"/>
+                            <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="14"/>
+                            <state key="normal" title="Email">
+                                <color key="titleColor" red="0.30196078430000001" green="0.30980392159999998" blue="0.32549019610000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <state key="highlighted">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="ResponseBtnPressed:" destination="-1" eventType="touchUpInside" id="090-Iv-a5M"/>
+                            </connections>
+                        </button>
+                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" tag="10" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" id="fS1-h3-tVL">
+                            <rect key="frame" x="26" y="637" width="840" height="73"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <color key="textColor" red="0.30196078430000001" green="0.30980392159999998" blue="0.32549019610000002" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            <connections>
+                                <outlet property="delegate" destination="-1" id="1bu-Ul-FCW"/>
+                            </connections>
+                        </textView>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name" minimumFontSize="17" id="IKH-wx-xtM">
+                            <rect key="frame" x="135" y="32" width="731" height="25"/>
+                            <color key="textColor" red="0.30196078430000001" green="0.30980392159999998" blue="0.32549019610000002" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            <connections>
+                                <outlet property="delegate" destination="-1" id="Qib-kc-kIh"/>
+                            </connections>
+                        </textField>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Address" minimumFontSize="17" id="Q7P-2x-iib">
+                            <rect key="frame" x="135" y="212" width="727" height="25"/>
+                            <color key="textColor" red="0.30196078430000001" green="0.30980392159999998" blue="0.32549019610000002" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            <connections>
+                                <outlet property="delegate" destination="-1" id="K9j-Az-AS7"/>
+                            </connections>
+                        </textField>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Ttitle" minimumFontSize="17" id="4qP-v4-xQI">
+                            <rect key="frame" x="135" y="90" width="309" height="25"/>
+                            <color key="textColor" red="0.30196078430000001" green="0.30980392159999998" blue="0.32549019610000002" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            <connections>
+                                <outlet property="delegate" destination="-1" id="3la-g2-AtD"/>
+                            </connections>
+                        </textField>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Institution" minimumFontSize="17" id="3aG-Mb-EXG">
+                            <rect key="frame" x="603" y="90" width="266" height="25"/>
+                            <color key="textColor" red="0.30196078430000001" green="0.30980392159999998" blue="0.32549019610000002" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            <connections>
+                                <outlet property="delegate" destination="-1" id="iNK-or-33n"/>
+                            </connections>
+                        </textField>
+                        <button opaque="NO" tag="100" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="JMT-3I-4WF">
+                            <rect key="frame" x="128" y="151" width="69" height="26"/>
+                            <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="14"/>
+                            <state key="normal" title="M.D.">
+                                <color key="titleColor" red="0.30196078430000001" green="0.30980392159999998" blue="0.32549019610000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <state key="highlighted">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="CategoryBtnPressed:" destination="-1" eventType="touchUpInside" id="3zm-Mg-1gh"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="101" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="MBx-6V-1S8">
+                            <rect key="frame" x="203" y="151" width="76" height="25"/>
+                            <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="14"/>
+                            <state key="normal" title="D.O.">
+                                <color key="titleColor" red="0.30196078430000001" green="0.30980392159999998" blue="0.32549019610000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <state key="highlighted">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="CategoryBtnPressed:" destination="-1" eventType="touchUpInside" id="v5J-7e-zCB"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="102" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="8EI-Gw-GWS">
+                            <rect key="frame" x="282" y="151" width="95" height="25"/>
+                            <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="14"/>
+                            <state key="normal" title="Pharm D.">
+                                <color key="titleColor" red="0.30196078430000001" green="0.30980392159999998" blue="0.32549019610000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <state key="highlighted">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="CategoryBtnPressed:" destination="-1" eventType="touchUpInside" id="9w7-Kj-xfu"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="103" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="MDt-Um-Qsx">
+                            <rect key="frame" x="380" y="151" width="75" height="25"/>
+                            <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="14"/>
+                            <state key="normal" title="Ph. D.">
+                                <color key="titleColor" red="0.30196078430000001" green="0.30980392159999998" blue="0.32549019610000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <state key="highlighted">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="CategoryBtnPressed:" destination="-1" eventType="touchUpInside" id="IuU-3B-w9e"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="104" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="YvG-aj-mfJ">
+                            <rect key="frame" x="459" y="151" width="70" height="25"/>
+                            <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="14"/>
+                            <state key="normal" title="R.N.">
+                                <color key="titleColor" red="0.30196078430000001" green="0.30980392159999998" blue="0.32549019610000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <state key="highlighted">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="CategoryBtnPressed:" destination="-1" eventType="touchUpInside" id="dyV-QS-jp2"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="105" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="rJS-8Z-8xi">
+                            <rect key="frame" x="531" y="151" width="80" height="25"/>
+                            <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="14"/>
+                            <state key="normal" title="R.Ph.">
+                                <color key="titleColor" red="0.30196078430000001" green="0.30980392159999998" blue="0.32549019610000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <state key="highlighted">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="CategoryBtnPressed:" destination="-1" eventType="touchUpInside" id="Nbf-KB-tMy"/>
+                            </connections>
+                        </button>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="City" minimumFontSize="17" id="XDZ-bd-PM4">
+                            <rect key="frame" x="135" y="267" width="280" height="25"/>
+                            <color key="textColor" red="0.30196078430000001" green="0.30980392159999998" blue="0.32549019610000002" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            <connections>
+                                <outlet property="delegate" destination="-1" id="7AS-kZ-d8K"/>
+                            </connections>
+                        </textField>
+                        <textField opaque="NO" clipsSubviews="YES" tag="30" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="State" minimumFontSize="17" id="HkF-RO-gKg">
+                            <rect key="frame" x="512" y="267" width="115" height="25"/>
+                            <color key="textColor" red="0.30196078430000001" green="0.30980392159999998" blue="0.32549019610000002" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            <connections>
+                                <outlet property="delegate" destination="-1" id="4Dk-ke-OMD"/>
+                            </connections>
+                        </textField>
+                        <textField opaque="NO" clipsSubviews="YES" tag="20" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Zip Code" minimumFontSize="17" id="xc2-xH-xZp">
+                            <rect key="frame" x="757" y="267" width="113" height="25"/>
+                            <color key="textColor" red="0.30196078430000001" green="0.30980392159999998" blue="0.32549019610000002" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
+                            <connections>
+                                <outlet property="delegate" destination="-1" id="mYq-lF-kT3"/>
+                            </connections>
+                        </textField>
+                        <textField opaque="NO" clipsSubviews="YES" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" minimumFontSize="17" id="X0N-U8-lY5">
+                            <rect key="frame" x="646" y="328" width="224" height="25"/>
+                            <color key="textColor" red="0.30196078430000001" green="0.30980392159999998" blue="0.32549019610000002" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                            <connections>
+                                <outlet property="delegate" destination="-1" id="EOe-SS-qkf"/>
+                            </connections>
+                        </textField>
+                        <textField opaque="NO" clipsSubviews="YES" tag="22" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Fax" minimumFontSize="17" id="jrF-kz-HRN">
+                            <rect key="frame" x="398" y="328" width="168" height="25"/>
+                            <color key="textColor" red="0.30196078430000001" green="0.30980392159999998" blue="0.32549019610000002" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
+                            <connections>
+                                <outlet property="delegate" destination="-1" id="VMV-ab-Be5"/>
+                            </connections>
+                        </textField>
+                        <textField opaque="NO" clipsSubviews="YES" tag="21" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Telephone" minimumFontSize="17" id="NK4-Kx-ssf">
+                            <rect key="frame" x="135" y="328" width="184" height="25"/>
+                            <color key="textColor" red="0.30196078430000001" green="0.30980392159999998" blue="0.32549019610000002" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
+                            <connections>
+                                <outlet property="delegate" destination="-1" id="4Cj-hD-gfA"/>
+                            </connections>
+                        </textField>
+                        <button opaque="NO" tag="200" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="hyT-0L-XQ4">
+                            <rect key="frame" x="262" y="391" width="75" height="26"/>
+                            <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="14"/>
+                            <state key="normal" title="US Mail">
+                                <color key="titleColor" red="0.30196078430000001" green="0.30980392159999998" blue="0.32549019610000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <state key="highlighted">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="ResponseBtnPressed:" destination="-1" eventType="touchUpInside" id="9aj-TJ-iAg"/>
+                            </connections>
+                        </button>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Others" minimumFontSize="17" id="eMm-eF-r2q">
+                            <rect key="frame" x="687" y="151" width="183" height="26"/>
+                            <color key="textColor" red="0.30196078430000001" green="0.30980392159999998" blue="0.32549019610000002" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            <connections>
+                                <outlet property="delegate" destination="-1" id="DnY-de-xCB"/>
+                            </connections>
+                        </textField>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" id="BXG-Fr-VYh">
+                            <rect key="frame" x="264" y="485" width="605" height="84"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="bHm-RL-LfL">
+                            <rect key="frame" x="264" y="485" width="605" height="85"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                            <state key="normal">
+                                <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <state key="highlighted">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                        </button>
+                        <button opaque="NO" tag="201" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="0yg-jf-5ks">
+                            <rect key="frame" x="338" y="391" width="69" height="26"/>
+                            <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="14"/>
+                            <state key="normal" title="Phone">
+                                <color key="titleColor" red="0.30196078430000001" green="0.30980392159999998" blue="0.32549019610000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <state key="highlighted">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="ResponseBtnPressed:" destination="-1" eventType="touchUpInside" id="oWa-ai-fhk"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="203" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="7YI-mq-mZz">
+                            <rect key="frame" x="483" y="391" width="67" height="26"/>
+                            <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="14"/>
+                            <state key="normal" title="Fax">
+                                <color key="titleColor" red="0.30196078430000001" green="0.30980392159999998" blue="0.32549019610000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <state key="highlighted">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="ResponseBtnPressed:" destination="-1" eventType="touchUpInside" id="odR-mk-WaO"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="204" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="y6h-WS-u4a">
+                            <rect key="frame" x="556" y="391" width="219" height="26"/>
+                            <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="14"/>
+                            <state key="normal" title="Meeting with Medical Rep">
+                                <color key="titleColor" red="0.30196078430000001" green="0.30980392159999998" blue="0.32549019610000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <state key="highlighted">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="ResponseBtnPressed:" destination="-1" eventType="touchUpInside" id="BIr-uo-bVx"/>
+                            </connections>
+                        </button>
+                        <textField opaque="NO" clipsSubviews="YES" tag="11" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Sales Representative" minimumFontSize="10" id="5gn-ob-jPN">
+                            <rect key="frame" x="240" y="745" width="320" height="25"/>
+                            <color key="textColor" red="0.30196078430000001" green="0.30980392159999998" blue="0.32549019610000002" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            <connections>
+                                <outlet property="delegate" destination="-1" id="sMm-Pd-tH0"/>
+                            </connections>
+                        </textField>
+                        <textField opaque="NO" clipsSubviews="YES" tag="12" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Territory" minimumFontSize="10" id="7ZQ-nR-Qhp">
+                            <rect key="frame" x="695" y="745" width="175" height="25"/>
+                            <color key="textColor" red="0.30196078430000001" green="0.30980392159999998" blue="0.32549019610000002" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            <connections>
+                                <outlet property="delegate" destination="-1" id="X9H-jT-0Bg"/>
+                            </connections>
+                        </textField>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="zRb-NH-6Uk">
+                            <rect key="frame" x="720" y="797" width="106" height="20"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                            <state key="normal">
+                                <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <state key="highlighted">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="privacyPolicyTouched:" destination="-1" eventType="touchUpInside" id="feh-uK-6MA"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </scrollView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="jlg-wV-qJ7">
+                    <rect key="frame" x="955" y="45" width="40" height="40"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                    <state key="normal">
+                        <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="highlighted">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="CloseBtnPressed:" destination="-1" eventType="touchUpInside" id="Qrx-b0-r6j"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="7Ki-OO-NYm">
+                    <rect key="frame" x="79" y="80" width="73" height="30"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                    <state key="normal">
+                        <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="highlighted">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="SaveBtnPressed:" destination="-1" eventType="touchUpInside" id="abQ-s9-rDo"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="kCe-So-937">
+                    <rect key="frame" x="859" y="79" width="84" height="30"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                    <state key="normal">
+                        <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="highlighted">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="SendBtnPressed:" destination="-1" eventType="touchUpInside" id="atU-lU-6AX"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="fHW-ss-pab">
+                    <rect key="frame" x="732" y="80" width="86" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" image="form_delete_btn.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="DeleteBtnPressed:" destination="-1" eventType="touchUpInside" id="qM0-Wy-nis"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <nil key="simulatedStatusBarMetrics"/>
+            <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="form_delete_btn.png" width="171" height="60"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+</document>
